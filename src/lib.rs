@@ -157,7 +157,7 @@ impl WinitPlatform {
             _ => (),
         }
     }
-    fn handle_window_event(&mut self, io: &mut Io, window: &Window, event: &WindowEvent) {
+    pub fn handle_window_event(&mut self, io: &mut Io, window: &Window, event: &WindowEvent) {
         match *event {
             WindowEvent::Resized(physical_size) => {
                 let logical_size = physical_size.to_logical(window.scale_factor());
